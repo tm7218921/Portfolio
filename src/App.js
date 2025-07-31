@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Header from "./components/Header";
+import ProfileSection from "./components/ProfileSection";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import WorkExperience from "./components/WorkExperience";
+import AcademicActivities from "./components/AcademicActivities";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import TechnicalBlog from "./components/TechnicalBlog";
+import { Helmet } from "react-helmet";
+
+import "./index.css";
+import WorkshopsAndHackathons from "./components/WorkshopsAndHackathons";
 
 function App() {
+  useEffect(() => {
+    document.title = "Tanmay Mandal - Portfolio";
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <Helmet>
+        <title>Tanmay Mandal - AI & Data Science Portfolio</title>
+        <meta name="description" content="Portfolio of Tanmay Mandal - AI & Data Science Engineer" />
+      </Helmet>
+
+      <Header />
+      <ProfileSection />
+      <About />
+      <Skills />
+      <WorkExperience />
+      <WorkshopsAndHackathons />
+      <AcademicActivities />
+      <Projects />
+      <TechnicalBlog />
+      <Contact />
+      <Footer />
+      
+    </>
   );
 }
 
