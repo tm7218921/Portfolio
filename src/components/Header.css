@@ -1,35 +1,42 @@
 .header {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 4vw;
-  background: rgba(18,20,26, 0.91); /* Glassy bg */
+  background: rgba(18, 20, 26, 0.91);
   box-shadow: 0 2px 8px #22222a33;
-  position: sticky; top: 0; z-index: 99;
+  position: sticky;
+  top: 0;
+  z-index: 99;
   backdrop-filter: blur(10px);
 }
 
+/* Branding */
 .header__branding {
   display: flex;
   align-items: center;
-  gap: 0.75rem;     /* Adjust spacing as needed */
+  gap: 0.75rem;
 }
 .header__icon {
-  width: 32px;      /* or any size */
+  width: 32px;
   height: 32px;
   margin-right: 0.6rem;
   display: inline-block;
 }
-
 .header__logo {
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
+
+/* Navigation */
 .header__nav {
   display: flex;
-  flex-direction: row; /* Make links display in a row */
+  flex-direction: row;
   align-items: center;
-  gap: 2rem; /* Space between links */
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav__link {
@@ -38,7 +45,6 @@
   text-decoration: none;
   transition: color 0.18s;
   position: relative;
-  /* (Add hover and underline styles as previously given) */
 }
 
 .header__nav .nav__link::after {
@@ -57,4 +63,43 @@
 .header__nav .nav__link:hover::after,
 .header__nav .nav__link:focus::after {
   width: 100%;
+}
+
+/* Hamburger Button - hidden by default */
+.header__menu-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive Styles: 700px or less */
+@media (max-width: 700px) {
+  /* Hide nav links by default on small screens */
+  .header__nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(18,20,26,0.95);
+    position: absolute;
+    top: 60px; /* height of your header */
+    right: 0;
+    width: 100vw;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 4px 16px #22222aaa;
+    z-index: 100;
+  }
+
+  /* Show nav when .open class is added */
+  .header__nav.open {
+    display: flex;
+  }
+
+  /* Hamburger button visible */
+  .header__menu-btn {
+    display: block;
+  }
 }
