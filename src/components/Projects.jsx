@@ -20,6 +20,12 @@ const projects = [
     date: "Dec 2024 – Jan 2024",
     description: "Live object tracking using YOLOv3, trained on COCO for robust detection.",
     stack: "YOLOv3, Python, Deep Learning"
+  },
+  {
+    title: "Product Authentication Using Blockchain",
+    date: "Sept 2025 – Oct 2025",
+    description: "Designed smart contracts on Ethereum to manage secure product registration and ownership tracking.",
+    stack: "Blockchain, Ethereum, Smart Contracts, Web3, Python"
   }
 ];
 
