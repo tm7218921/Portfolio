@@ -27,6 +27,7 @@ const projects = [
     description: "Designed smart contracts on Ethereum to manage secure product registration and ownership tracking.",
     stack: "Blockchain, Ethereum, Smart Contracts, Web3, Python"
   }
+  
 ];
 
 export default function Projects() {
